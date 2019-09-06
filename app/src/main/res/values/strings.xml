@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">METAPALL</string>
+    <string name="weight">Weight</string>
+    <string name="height">Height</string>
+    <string name="age">age</string>
+    <string name="CalculateBMI">Calculate</string>
+    <string name="CHO_needs">CHO NEEDS</string>
+</resources>
