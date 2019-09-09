@@ -1,300 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/bg"
     android:weightSum="10"
     tools:context=".MainActivity">
 
-    <RelativeLayout
-        android:layout_weight="2"
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp">
+        android:layout_height="250dp"
+        android:background="@drawable/gradbck"></LinearLayout>
 
-        <TextView
-            android:id="@+id/TextGird"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="METAPAL"
-            android:textColor="@android:color/white"
-            android:layout_centerInParent="true"
-            android:textSize="34sp" />
+    <TextView
+        android:id="@+id/textView"
+        android:text="Hello, Champion."
+        android:textSize="30dp"
+        android:textColor="@android:color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp" />
 
-    </RelativeLayout>
+    <Button
+        android:id="@+id/prog"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/prog"
+        android:stateListAnimator="@null"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="192dp" />
 
-    <GridLayout
-        android:id="@+id/mainGrid"
-        android:columnCount="2"
-        android:rowCount="3"
-        android:alignmentMode="alignMargins"
-        android:columnOrderPreserved="false"
-        android:layout_weight="8"
+    <Button
+        android:id="@+id/bmi"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="77dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="235dp"
+        android:background="@drawable/bmi"
+        android:stateListAnimator="@null"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="192dp" />
+
+    <Button
+        android:id="@+id/cho"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="77dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="355dp"
+        android:background="@drawable/cho"
+        android:stateListAnimator="@null"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="192dp" />
+
+    <Button
+        android:id="@+id/cal"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="77dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="475dp"
+        android:background="@drawable/cal"
+        android:stateListAnimator="@null"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="192dp" />
+
+    <Button
+        android:id="@+id/h2o"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="237dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="235dp"
+        android:layout_marginEnd="77dp"
+        android:background="@drawable/h2o"
+        android:stateListAnimator="@null"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="192dp" />
+
+    <Button
+        android:id="@+id/pro"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="237dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="355dp"
+        android:layout_marginEnd="77dp"
+        android:background="@drawable/pro"
+        android:stateListAnimator="@null"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="192dp" />
+
+    <Button
+        android:id="@+id/set"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="237dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="475dp"
+        android:layout_marginEnd="77dp"
+        android:background="@drawable/set"
+        android:stateListAnimator="@null"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="192dp" />
+
+    <Button
+        android:id="@+id/reci"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/reci"
+        android:stateListAnimator="@null"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="192dp" />
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:padding="14dp"
-        >
-        <!-- Row 1 -->
-        <!-- Column 1 -->
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cvBMI"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="16dp"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:clickable="true"
-            >
-            
-            <LinearLayout
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:layout_margin="16dp"
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:src="@drawable/mb"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="BMI"
-                    android:textAlignment="center"
-                    android:textColor="@android:color/black"
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
-            
-        </androidx.cardview.widget.CardView>
-
-        <!-- Column 2 -->
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cvCHO"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="16dp"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:clickable="true"
-            >
-
-            <LinearLayout
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:layout_margin="16dp"
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:src="@drawable/notes"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:textSize="18dp"
-                    android:textColor="@android:color/black"
-                    android:textAlignment="center"
-                    android:text="CHO" />
-            </LinearLayout>
+        android:layout_height="74dp"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="631dp"
+        android:background="@drawable/botwa"></LinearLayout>
 
 
-        </androidx.cardview.widget.CardView>
-
-        <!-- Row 2 -->
-        <!-- Column 1 -->
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cvH2O"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="16dp"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:clickable="true"
-            >
-
-            <LinearLayout
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:layout_margin="16dp"
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:src="@drawable/piggy"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:textSize="18dp"
-                    android:textColor="@android:color/black"
-                    android:textAlignment="center"
-                    android:text="H2O" />
-            </LinearLayout>
-
-
-        </androidx.cardview.widget.CardView>
-
-        <!-- Column 2 -->
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cvProtein"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="16dp"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:clickable="true"
-            >
-
-            <LinearLayout
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:layout_margin="16dp"
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:src="@drawable/shopping"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:textSize="18dp"
-                    android:textColor="@android:color/black"
-                    android:textAlignment="center"
-                    android:text="Protein" />
-            </LinearLayout>
-
-
-        </androidx.cardview.widget.CardView>
-
-        <!-- Row 3 -->
-        <!-- Column 1 -->
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cvCalendar"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="16dp"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:clickable="true"
-            >
-
-            <LinearLayout
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:layout_margin="16dp"
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:src="@drawable/calendar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:textSize="18dp"
-                    android:textColor="@android:color/black"
-                    android:textAlignment="center"
-                    android:text="Calendar" />
-            </LinearLayout>
-
-
-        </androidx.cardview.widget.CardView>
-
-        <!-- Column 2 -->
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cvSettings"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="16dp"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:clickable="true"
-            >
-
-            <LinearLayout
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:layout_margin="16dp"
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:src="@drawable/settings"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:textSize="18dp"
-                    android:textColor="@android:color/black"
-                    android:textAlignment="center"
-                    android:text="Settings" />
-            </LinearLayout>
-
-
-        </androidx.cardview.widget.CardView>
-
-    </GridLayout>
-
-
-</LinearLayout>
+</RelativeLayout>
