@@ -13,7 +13,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:background="@drawable/gradbck"></LinearLayout>
+        android:background="@drawable/gradbck">
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/textView"
@@ -27,9 +29,10 @@
         android:layout_marginTop="100dp" />
 
     <Button
-        android:id="@+id/prog"
+        android:id="@+id/buttonProg"
         android:layout_width="150dp"
         android:layout_height="150dp"
+        android:foreground="?android:attr/selectableItemBackground"
         android:layout_below="@+id/textView"
         android:layout_alignParentStart="true"
         android:layout_marginStart="50dp"
@@ -41,9 +44,10 @@
         tools:layout_editor_absoluteY="192dp" />
 
     <Button
-        android:id="@+id/bmi"
+        android:id="@+id/buttonBmi"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:foreground="?android:attr/selectableItemBackground"
         android:layout_below="@+id/textView"
         android:layout_alignParentStart="true"
         android:layout_marginStart="77dp"
@@ -55,9 +59,10 @@
         tools:layout_editor_absoluteY="192dp" />
 
     <Button
-        android:id="@+id/cho"
+        android:id="@+id/buttonCho"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:foreground="?android:attr/selectableItemBackground"
         android:layout_below="@+id/textView"
         android:layout_alignParentStart="true"
         android:layout_marginStart="77dp"
@@ -69,9 +74,10 @@
         tools:layout_editor_absoluteY="192dp" />
 
     <Button
-        android:id="@+id/cal"
+        android:id="@+id/buttonCal"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:foreground="?android:attr/selectableItemBackground"
         android:layout_below="@+id/textView"
         android:layout_alignParentStart="true"
         android:layout_marginStart="77dp"
@@ -83,9 +89,10 @@
         tools:layout_editor_absoluteY="192dp" />
 
     <Button
-        android:id="@+id/h2o"
+        android:id="@+id/buttonH2o"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:foreground="?android:attr/selectableItemBackground"
         android:layout_below="@+id/textView"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
@@ -99,9 +106,10 @@
         tools:layout_editor_absoluteY="192dp" />
 
     <Button
-        android:id="@+id/pro"
+        android:id="@+id/buttonPro"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:foreground="?android:attr/selectableItemBackground"
         android:layout_below="@+id/textView"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
@@ -115,9 +123,10 @@
         tools:layout_editor_absoluteY="192dp" />
 
     <Button
-        android:id="@+id/set"
+        android:id="@+id/buttonSet"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:foreground="?android:attr/selectableItemBackground"
         android:layout_below="@+id/textView"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
@@ -131,9 +140,10 @@
         tools:layout_editor_absoluteY="192dp" />
 
     <Button
-        android:id="@+id/reci"
+        android:id="@+id/buttonReci"
         android:layout_width="150dp"
         android:layout_height="150dp"
+
         android:layout_below="@+id/textView"
         android:layout_alignParentEnd="true"
         android:layout_marginLeft="220dp"
@@ -146,9 +156,9 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="74dp"
+        android:layout_height="150dp"
         android:layout_below="@+id/textView"
-        android:layout_marginTop="631dp"
+        android:layout_marginTop="609dp"
         android:background="@drawable/botwa"></LinearLayout>
 
 

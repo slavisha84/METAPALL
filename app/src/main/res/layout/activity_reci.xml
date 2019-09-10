@@ -2,12 +2,12 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_protein"
+    android:id="@+id/activity_reci"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="10"
-    tools:context=".ProteinActivity">
+    tools:context=".ReciActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,7 +17,7 @@
 
     <TextView
         android:id="@+id/textView"
-        android:text="PROTEIN"
+        android:text="RECIPES"
         android:textSize="30dp"
         android:textColor="@android:color/white"
         android:layout_width="wrap_content"
