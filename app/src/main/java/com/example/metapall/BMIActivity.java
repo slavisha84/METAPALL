@@ -15,7 +15,9 @@ public class BMIActivity extends AppCompatActivity {
     private EditText height;
     private EditText weight;
     private EditText age;
+    private EditText sex;
     private TextView result;
+
 
 
     @Override
@@ -25,7 +27,9 @@ public class BMIActivity extends AppCompatActivity {
         height = (EditText) findViewById(R.id.height);
         weight = (EditText) findViewById(R.id.weight);
         age = (EditText) findViewById(R.id.age);
+        sex = (EditText) findViewById(R.id.sex);
         result = (TextView) findViewById(R.id.result);
+
     }
     public void CalculateBMI(View v) {
         String heightStr = height.getText().toString();
