@@ -44,7 +44,7 @@
         tools:layout_editor_absoluteY="192dp" />
 
     <Button
-        android:id="@+id/buttonBmi"
+        android:id="@+id/buttonBmr"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:foreground="?android:attr/selectableItemBackground"

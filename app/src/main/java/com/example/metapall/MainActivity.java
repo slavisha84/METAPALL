@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         Button buttonProg = findViewById(R.id.buttonProg);
         Button buttonReci = findViewById(R.id.buttonReci);
-        Button buttonBmi = findViewById(R.id.buttonBmi);
+        Button buttonBmr = findViewById(R.id.buttonBmr);
         Button buttonH2o = findViewById(R.id.buttonH2o);
         Button buttonCho = findViewById(R.id.buttonCho);
         Button buttonPro = findViewById(R.id.buttonPro);
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         buttonProg.setOnClickListener(this);
         buttonReci.setOnClickListener(this);
-        buttonBmi.setOnClickListener(this);
+        buttonBmr.setOnClickListener(this);
         buttonH2o.setOnClickListener(this);
         buttonCho.setOnClickListener(this);
         buttonPro.setOnClickListener(this);
@@ -52,8 +52,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.buttonReci:
                 openReciActivity();
                 break;
-            case R.id.buttonBmi:
-                openBMIActivity();
+            case R.id.buttonBmr:
+                openBMRActivity();
                 break;
             case R.id.buttonH2o:
                 openH2OActivity();
@@ -92,8 +92,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     /************************************************************************************
      * Setting Up method to open BMIActivity
      ************************************************************************************/
-    private void openBMIActivity() {
-        Intent intent = new Intent(this, BMIActivity.class);
+    private void openBMRActivity() {
+        Intent intent = new Intent(this, BMRActivity.class);
         startActivity(intent);
     }
 

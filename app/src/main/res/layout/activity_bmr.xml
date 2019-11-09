@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="10"
-    tools:context=".BMIActivity">
+    tools:context=".BMRActivity">
 
 
     <LinearLayout
@@ -18,7 +18,7 @@
 
     <TextView
         android:id="@+id/textView"
-        android:text="BMI"
+        android:text="BMR"
         android:textSize="30dp"
         android:textColor="@android:color/white"
         android:layout_width="wrap_content"
@@ -34,8 +34,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView"
         android:layout_alignEnd="@+id/textView"
-        android:layout_marginTop="182dp"
-        android:layout_marginEnd="-52dp"
+        android:layout_marginTop="118dp"
+        android:layout_marginEnd="-46dp"
         android:ems="10"
         android:gravity="center_horizontal"
         android:hint="Enter Height"
@@ -49,9 +49,9 @@
         android:layout_below="@+id/textView"
         android:layout_alignEnd="@+id/textView"
         android:layout_alignRight="@+id/textView"
-        android:layout_marginTop="242dp"
-        android:layout_marginEnd="-51dp"
-        android:layout_marginRight="-51dp"
+        android:layout_marginTop="178dp"
+        android:layout_marginEnd="-45dp"
+        android:layout_marginRight="-45dp"
         android:ems="10"
         android:gravity="center_horizontal"
         android:hint="Enter Weight"
@@ -64,13 +64,27 @@
         android:layout_below="@+id/textView"
         android:layout_alignEnd="@+id/textView"
         android:layout_alignRight="@+id/textView"
-        android:layout_marginTop="301dp"
-        android:layout_marginEnd="-50dp"
-        android:layout_marginRight="-50dp"
+        android:layout_marginTop="237dp"
+        android:layout_marginEnd="-44dp"
+        android:layout_marginRight="-44dp"
         android:ems="10"
         android:gravity="center_horizontal"
         android:hint="Enter Age"
         android:inputType="number" />
+
+    <Spinner
+        android:id="@+id/actlvl"
+        android:layout_width="158dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_marginTop="349dp"
+        android:layout_marginEnd="-48dp"
+        android:layout_marginRight="-48dp"
+        android:ems="10"
+        android:entries="@array/Names"
+        android:gravity="center_horizontal" />
 
     <EditText
         android:id="@+id/sex"
@@ -79,13 +93,13 @@
         android:layout_below="@+id/textView"
         android:layout_alignEnd="@+id/textView"
         android:layout_alignRight="@+id/textView"
-        android:layout_marginTop="360dp"
-        android:layout_marginEnd="-53dp"
-        android:layout_marginRight="-53dp"
+        android:layout_marginTop="296dp"
+        android:layout_marginEnd="-47dp"
+        android:layout_marginRight="-47dp"
         android:ems="10"
         android:gravity="center_horizontal"
         android:hint="Enter Sex"
-        android:inputType="number" />
+        android:inputType="text" />
 
     <Button
         android:id="@+id/calc"
@@ -94,23 +108,34 @@
         android:layout_below="@+id/textView"
         android:layout_alignEnd="@+id/textView"
         android:layout_alignRight="@+id/textView"
-        android:layout_marginTop="429dp"
-        android:layout_marginEnd="-34dp"
-        android:layout_marginRight="-34dp"
+        android:layout_marginTop="402dp"
+        android:layout_marginEnd="-27dp"
+        android:layout_marginRight="-27dp"
         android:background="@drawable/buttonradius"
         android:backgroundTint="#FFFFFF"
-        android:onClick="CalculateBMI"
+        android:onClick="CalculateBMR"
         android:text="@string/CalculateBMI" />
 
     <TextView
-        android:id="@+id/result"
+        android:id="@+id/result2"
         android:layout_width="164dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView"
         android:layout_alignRight="@+id/textView"
-        android:layout_marginTop="485dp"
-        android:layout_marginRight="-58dp"
-        android:text="YOUR BMI IS:"
+        android:layout_marginTop="482dp"
+        android:layout_marginRight="-51dp"
+        android:text="YOUR DTEE IS:"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/result1"
+        android:layout_width="164dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_marginTop="458dp"
+        android:layout_marginRight="-51dp"
+        android:text="YOUR BMR IS:"
         android:textSize="15dp" />
 
     <LinearLayout
