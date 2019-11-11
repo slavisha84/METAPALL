@@ -6,7 +6,12 @@
     <string name="CalculateBMI">Calculate</string>
     <string name="CHO_needs">CHO NEEDS</string>
     <string name="title_activity_settings">Settings</string>
-    <string-array name="Names">
+    <string-array name="GenderChoice">
+        <item>Gender</item>
+        <item>M</item>
+        <item>F</item>
+    </string-array>
+    <string-array name="Activities">
         <item>Select Activity Level</item>
         <item>Light</item>
         <item>Moderate</item>

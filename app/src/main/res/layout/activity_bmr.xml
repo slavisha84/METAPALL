@@ -73,17 +73,31 @@
         android:inputType="number" />
 
     <Spinner
-        android:id="@+id/actlvl"
-        android:layout_width="158dp"
+        android:id="@+id/spinnerActivity"
+        android:layout_width="185dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView"
         android:layout_alignEnd="@+id/textView"
         android:layout_alignRight="@+id/textView"
-        android:layout_marginTop="349dp"
-        android:layout_marginEnd="-48dp"
-        android:layout_marginRight="-48dp"
+        android:layout_marginTop="364dp"
+        android:layout_marginEnd="-75dp"
+        android:layout_marginRight="-75dp"
         android:ems="10"
-        android:entries="@array/Names"
+        android:entries="@array/Activities"
+        android:gravity="center_horizontal" />
+
+    <Spinner
+        android:id="@+id/spinnerGender"
+        android:layout_width="186dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_marginTop="304dp"
+        android:layout_marginEnd="-75dp"
+        android:layout_marginRight="-75dp"
+        android:ems="10"
+        android:entries="@array/GenderChoice"
         android:gravity="center_horizontal" />
 
     <EditText
@@ -93,13 +107,30 @@
         android:layout_below="@+id/textView"
         android:layout_alignEnd="@+id/textView"
         android:layout_alignRight="@+id/textView"
-        android:layout_marginTop="296dp"
-        android:layout_marginEnd="-47dp"
-        android:layout_marginRight="-47dp"
+        android:layout_marginTop="326dp"
+        android:layout_marginEnd="-54dp"
+        android:layout_marginRight="-54dp"
         android:ems="10"
         android:gravity="center_horizontal"
         android:hint="Enter Sex"
+        android:visibility="invisible"
         android:inputType="text" />
+
+    <EditText
+        android:id="@+id/ActvCh"
+        android:layout_width="158dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_marginTop="371dp"
+        android:layout_marginEnd="-58dp"
+        android:layout_marginRight="-58dp"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="Enter Sex"
+        android:inputType="text"
+        android:visibility="invisible" />
 
     <Button
         android:id="@+id/calc"
