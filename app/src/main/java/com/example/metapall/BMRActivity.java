@@ -75,8 +75,6 @@ public class BMRActivity extends AppCompatActivity implements AdapterView.OnItem
             String gen = adapterView.getItemAtPosition(i).toString();
             ActvCh.setText(gen);
         }
-
-
     }
 
     //may keep blank
@@ -114,7 +112,7 @@ public class BMRActivity extends AppCompatActivity implements AdapterView.OnItem
                 }
                 else if (strActv .equals("Vigorous"))
                 {
-                    double dtee = Math.round((bmrr * 1.76) * 100);
+                    double dtee = Math.round((bmrr * 2.25) * 100);
                     result2.setText("YOUR DTEE IS: " + dtee / 100);
                 }
 
@@ -124,11 +122,23 @@ public class BMRActivity extends AppCompatActivity implements AdapterView.OnItem
             {
                 double bmr = Math.round((((weightValue / 2.2046) * 10) + (6.25 * (heightValue * 30.48)) - (5 * ageValue) - 161) * 100);
                 double bmrr = bmr / 100;
-                double dtee = Math.round((bmrr * 1.53) * 100);
                 result1.setText("YOUR BMR IS: " + bmrr);
-                result2.setText("YOUR DTEE IS: " + dtee / 100);
+                if (strActv .equals("Light"))
+                {
+                    double dtee = Math.round((bmrr * 1.53) * 100);
+                    result2.setText("YOUR DTEE IS: " + dtee / 100);
+                }
+                else if (strActv .equals("Moderate"))
+                {
+                    double dtee = Math.round((bmrr * 1.76) * 100);
+                    result2.setText("YOUR DTEE IS: " + dtee / 100);
+                }
+                else if (strActv .equals("Vigorous"))
+                {
+                    double dtee = Math.round((bmrr * 2.25) * 100);
+                    result2.setText("YOUR DTEE IS: " + dtee / 100);
+                }
             }
-
         }
     }
 }
