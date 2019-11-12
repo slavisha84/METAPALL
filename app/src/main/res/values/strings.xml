@@ -8,11 +8,11 @@
     <string name="title_activity_settings">Settings</string>
     <string-array name="GenderChoice">
         <item>Gender</item>
-        <item>M</item>
-        <item>F</item>
+        <item>Male</item>
+        <item>Female</item>
     </string-array>
     <string-array name="Activities">
-        <item>Select Activity Level</item>
+        <item>Activity Level</item>
         <item>Light</item>
         <item>Moderate</item>
         <item>Vigorous</item>

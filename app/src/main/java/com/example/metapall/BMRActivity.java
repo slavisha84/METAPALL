@@ -22,13 +22,12 @@ public class BMRActivity extends AppCompatActivity implements AdapterView.OnItem
     private EditText height;
     private EditText weight;
     private EditText age;
-    private EditText gender;
     private TextView result1;
     private TextView result2;
     private Spinner Gspinner;
     private Spinner Aspinner;
-
-    private EditText ActvCh;
+    private String genderCh;
+    private String ActvCh;
 
 
     @Override
@@ -38,64 +37,63 @@ public class BMRActivity extends AppCompatActivity implements AdapterView.OnItem
         height = (EditText) findViewById(R.id.height);
         weight = (EditText) findViewById(R.id.weight);
         age = (EditText) findViewById(R.id.age);
-        gender = (EditText) findViewById(R.id.sex);
         result1 = (TextView) findViewById(R.id.result1);
         result2 = (TextView) findViewById(R.id.result2);
-        ActvCh = (EditText) findViewById(R.id.ActvCh);
 
-        //find spinner's view
+        //Identify spinners view based on r.id
         Gspinner = (Spinner) findViewById(R.id.spinnerGender);
         Aspinner = (Spinner) findViewById(R.id.spinnerActivity);
         //add on item selected listerners to spinner
         Gspinner.setOnItemSelectedListener(this);
         Aspinner.setOnItemSelectedListener(this);
 
-        //create adapter
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.GenderChoice, android.R.layout.simple_spinner_item);
-        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.Activities, android.R.layout.simple_spinner_item);
-        //how the spinner will look when it drop downs on click
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        //Construct the adapter with simple spinner item
+        ArrayAdapter<CharSequence> Gendapter = ArrayAdapter.createFromResource(this, R.array.GenderChoice, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> Actvadapter = ArrayAdapter.createFromResource(this, R.array.Activities, android.R.layout.simple_spinner_item);
 
-        //setting adapter to spinner
-        Gspinner.setAdapter(adapter);
-        Aspinner.setAdapter(adapter2);
+        //Construct the spinner dropdown items
+        Gendapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        Actvadapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        //Set adapter to Gender spinner and Activity Spinner
+        Gspinner.setAdapter(Gendapter);
+        Aspinner.setAdapter(Actvadapter);
 
     }
-    //Do something when the item is selected
+    //Create on item selected function that will capture selected items from dropdown menu.
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-        if(adapterView == Gspinner){
-            //getting label name of the selected spinner
-            String gen = adapterView.getItemAtPosition(i).toString();
-            gender.setText(gen);
+        if(adapterView == Gspinner)
+        {
+            //get dropdown label from gender spinner
+            genderCh = adapterView.getItemAtPosition(i).toString();
         }
-        else if(adapterView == Aspinner){
-            //getting label name of the selected spinner
-            String gen = adapterView.getItemAtPosition(i).toString();
-            ActvCh.setText(gen);
+        else if(adapterView == Aspinner)
+        {
+            //get dropdown label from activity spinner
+            ActvCh = adapterView.getItemAtPosition(i).toString();
         }
     }
 
-    //may keep blank
+    //If nothing is selected, do nothing.
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
     }
-
+    // Create Calculator function to calculate all values
     public void CalculateBMR(View v) {
         String heightStr = height.getText().toString();
         String weightStr = weight.getText().toString();
-        String genStr = gender.getText().toString();
+        String genStr = genderCh;
         String ageStr = age.getText().toString();
-        String strActv = ActvCh.getText().toString();
+        String strActv = ActvCh;
 
-
+        // if statement to execute if all required values are present
         if (heightStr != null && !"".equals(heightStr)&& weightStr != null && !"".equals(weightStr) && genStr !=null && !"".equals(genStr) && ageStr != null && !"".equals(ageStr) ){
             double heightValue = Double.parseDouble(heightStr);
             double weightValue = Double.parseDouble(weightStr);
             double ageValue = Double.parseDouble(ageStr);
-
-            if (genStr .equals("M"))
+            // IF statement to provide calculation based on Male gender and one out of 3 level of activity
+            if (genStr .equals("Male"))
             {
                 double bmr = Math.round((((weightValue / 2.2046) * 10) + (6.25 * (heightValue * 30.48)) - (5 * ageValue) + 5) * 100);
                 double bmrr = bmr / 100;
@@ -117,8 +115,8 @@ public class BMRActivity extends AppCompatActivity implements AdapterView.OnItem
                 }
 
             }
-
-            else if (genStr .equals("F"))
+            // IF statement to provide calculation based on Female gender and one out of 3 level of activity
+            else if (genStr .equals("Female"))
             {
                 double bmr = Math.round((((weightValue / 2.2046) * 10) + (6.25 * (heightValue * 30.48)) - (5 * ageValue) - 161) * 100);
                 double bmrr = bmr / 100;
