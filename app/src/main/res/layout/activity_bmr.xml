@@ -116,6 +116,20 @@
         android:onClick="CalculateBMR"
         android:text="@string/CalculateBMI" />
 
+    <Button
+        android:id="@+id/btnAddData"
+        android:layout_width="115dp"
+        android:layout_height="29dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_marginTop="420dp"
+        android:layout_marginEnd="-27dp"
+        android:layout_marginRight="-27dp"
+        android:background="@drawable/buttonradius"
+        android:backgroundTint="#FFFFFF"
+        android:text="Save Data" />
+
     <TextView
         android:id="@+id/result2"
         android:layout_width="164dp"
