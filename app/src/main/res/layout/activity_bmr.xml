@@ -12,13 +12,12 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:background="@drawable/gradbck">
-    </LinearLayout>
+        android:layout_height="232dp"
+        android:background="@drawable/gradbck"></LinearLayout>
 
     <TextView
         android:id="@+id/textView"
-        android:text="BMR"
+        android:text="Hello Champion"
         android:textSize="30dp"
         android:textColor="@android:color/white"
         android:layout_width="wrap_content"
@@ -35,12 +34,13 @@
         android:layout_below="@+id/textView"
         android:layout_alignEnd="@+id/textView"
         android:layout_marginTop="110dp"
-        android:layout_marginEnd="-44dp"
+        android:layout_marginEnd="30dp"
         android:ems="10"
         android:gravity="center_horizontal"
         android:hint="Enter Height"
         android:importantForAutofill="no"
-        android:inputType="numberDecimal" />
+        android:inputType="numberDecimal"
+        android:textColor="#00FAFAFA" />
 
     <EditText
         android:id="@+id/weight"
@@ -49,9 +49,9 @@
         android:layout_below="@+id/textView"
         android:layout_alignEnd="@+id/textView"
         android:layout_alignRight="@+id/textView"
-        android:layout_marginTop="158dp"
-        android:layout_marginEnd="-45dp"
-        android:layout_marginRight="-45dp"
+        android:layout_marginTop="165dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
         android:ems="10"
         android:gravity="center_horizontal"
         android:hint="Enter Weight"
@@ -64,13 +64,14 @@
         android:layout_below="@+id/textView"
         android:layout_alignEnd="@+id/textView"
         android:layout_alignRight="@+id/textView"
-        android:layout_marginTop="208dp"
-        android:layout_marginEnd="-45dp"
-        android:layout_marginRight="-45dp"
+        android:layout_marginTop="216dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
         android:ems="10"
         android:gravity="center_horizontal"
         android:hint="Enter Age"
         android:inputType="number" />
+
 
     <Spinner
         android:id="@+id/spinnerActivity"
@@ -79,9 +80,9 @@
         android:layout_below="@+id/textView"
         android:layout_alignEnd="@+id/textView"
         android:layout_alignRight="@+id/textView"
-        android:layout_marginTop="294dp"
-        android:layout_marginEnd="-50dp"
-        android:layout_marginRight="-50dp"
+        android:layout_marginTop="318dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
         android:ems="10"
         android:entries="@array/Activities"
         android:gravity="center_horizontal" />
@@ -93,13 +94,12 @@
         android:layout_below="@+id/textView"
         android:layout_alignEnd="@+id/textView"
         android:layout_alignRight="@+id/textView"
-        android:layout_marginTop="259dp"
-        android:layout_marginEnd="-50dp"
-        android:layout_marginRight="-50dp"
+        android:layout_marginTop="274dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginRight="29dp"
         android:ems="10"
         android:entries="@array/GenderChoice"
         android:gravity="center_horizontal" />
-
 
     <Button
         android:id="@+id/calc"
@@ -108,9 +108,9 @@
         android:layout_below="@+id/textView"
         android:layout_alignEnd="@+id/textView"
         android:layout_alignRight="@+id/textView"
-        android:layout_marginTop="326dp"
-        android:layout_marginEnd="-25dp"
-        android:layout_marginRight="-25dp"
+        android:layout_marginTop="346dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginRight="54dp"
         android:background="@drawable/buttonradius"
         android:backgroundTint="#FFFFFF"
         android:onClick="CalculateBMR"
@@ -123,32 +123,32 @@
         android:layout_below="@+id/textView"
         android:layout_alignEnd="@+id/textView"
         android:layout_alignRight="@+id/textView"
-        android:layout_marginTop="420dp"
-        android:layout_marginEnd="-27dp"
-        android:layout_marginRight="-27dp"
+        android:layout_marginTop="449dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginRight="52dp"
         android:background="@drawable/buttonradius"
         android:backgroundTint="#FFFFFF"
         android:text="Save Data" />
 
     <TextView
-        android:id="@+id/result2"
+        android:id="@+id/DTEEResults"
         android:layout_width="164dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView"
         android:layout_alignRight="@+id/textView"
-        android:layout_marginTop="394dp"
-        android:layout_marginRight="-51dp"
+        android:layout_marginTop="421dp"
+        android:layout_marginRight="27dp"
         android:text="YOUR DTEE IS:"
         android:textSize="15dp" />
 
     <TextView
-        android:id="@+id/result1"
+        android:id="@+id/BMRResults"
         android:layout_width="164dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView"
         android:layout_alignRight="@+id/textView"
-        android:layout_marginTop="367dp"
-        android:layout_marginRight="-51dp"
+        android:layout_marginTop="379dp"
+        android:layout_marginRight="28dp"
         android:text="YOUR BMR IS:"
         android:textSize="15dp" />
 
@@ -157,6 +157,21 @@
         android:layout_height="150dp"
         android:layout_below="@+id/textView"
         android:layout_marginTop="609dp"
+        android:background="@drawable/botwa">
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/gotodash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CONFIRM" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="161dp"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="479dp"
         android:background="@drawable/botwa">
 
     </LinearLayout>

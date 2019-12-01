@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_calendar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context=".BMRActivity">
+
+
+    <Button
+        android:id="@+id/buttonH2o2"
+        android:layout_width="125dp"
+        android:layout_height="115dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="234dp"
+        android:layout_marginEnd="258dp"
+        android:background="@drawable/h2o"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:stateListAnimator="@null"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="192dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:layout_alignBottom="@+id/calc"
+        android:layout_marginBottom="-7dp"
+        android:background="@drawable/gradbck"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:text="DASHBOARD"
+        android:textSize="30dp"
+        android:textColor="@android:color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp" />
+
+    <TextView
+        android:id="@+id/AGE"
+        android:layout_width="165dp"
+        android:layout_height="23dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_marginTop="48dp"
+        android:layout_marginRight="125dp"
+        android:text="AGE:"
+        android:textSize="15dp" />
+
+
+    <TextView
+        android:id="@+id/AGE3"
+        android:layout_width="131dp"
+        android:layout_height="112dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_marginTop="360dp"
+        android:layout_marginRight="17dp"
+        android:background="@drawable/h2o"
+        android:gravity="bottom|center"
+        android:text="AGE:"
+        android:textAllCaps="false"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/WEIGHT"
+        android:layout_width="162dp"
+        android:layout_height="21dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_marginTop="122dp"
+        android:layout_marginRight="124dp"
+        android:text="WEIGHT:"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/GENDER"
+        android:layout_width="164dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_marginTop="74dp"
+        android:layout_marginRight="124dp"
+        android:text="GENDER:"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/HEIGHT"
+        android:layout_width="162dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_marginTop="98dp"
+        android:layout_marginRight="125dp"
+        android:text="HEIGHT:"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/DTEEResults"
+        android:layout_width="164dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_marginTop="289dp"
+        android:layout_marginRight="-105dp"
+        android:text="TDEE:"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/BMRResults"
+        android:layout_width="164dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_marginTop="240dp"
+        android:layout_marginRight="-105dp"
+        android:text="BMR:"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/H2O"
+        android:layout_width="50dp"
+        android:layout_height="19dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_marginTop="213dp"
+        android:layout_marginRight="183dp"
+        android:text="WATER"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/kCal"
+        android:layout_width="50dp"
+        android:layout_height="19dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_marginTop="216dp"
+        android:layout_marginRight="-37dp"
+        android:text="Kcal"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/CHO"
+        android:layout_width="37dp"
+        android:layout_height="19dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_marginTop="357dp"
+        android:layout_marginRight="183dp"
+        android:text="CHO"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/PROTEIN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_marginTop="355dp"
+        android:layout_marginRight="-13dp"
+        android:text="PRO"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/ACTLVL"
+        android:layout_width="162dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_marginTop="145dp"
+        android:layout_marginRight="124dp"
+        android:text="ACTIVITY LEVEL:"
+        android:textSize="15dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="161dp"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="479dp"
+        android:background="@drawable/botwa">
+
+    </LinearLayout>
+
+
+</RelativeLayout>
