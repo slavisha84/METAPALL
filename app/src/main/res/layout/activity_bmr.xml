@@ -39,8 +39,7 @@
         android:gravity="center_horizontal"
         android:hint="Enter Height"
         android:importantForAutofill="no"
-        android:inputType="numberDecimal"
-        android:textColor="#00FAFAFA" />
+        android:inputType="numberDecimal" />
 
     <EditText
         android:id="@+id/weight"
@@ -128,17 +127,19 @@
         android:layout_marginRight="52dp"
         android:background="@drawable/buttonradius"
         android:backgroundTint="#FFFFFF"
+        android:visibility="invisible"
         android:text="Save Data" />
 
     <TextView
-        android:id="@+id/DTEEResults"
+        android:id="@+id/TDEEResults"
         android:layout_width="164dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView"
         android:layout_alignRight="@+id/textView"
         android:layout_marginTop="421dp"
         android:layout_marginRight="27dp"
-        android:text="YOUR DTEE IS:"
+        android:text="TDEE:"
+        android:visibility="invisible"
         android:textSize="15dp" />
 
     <TextView
@@ -149,7 +150,8 @@
         android:layout_alignRight="@+id/textView"
         android:layout_marginTop="379dp"
         android:layout_marginRight="28dp"
-        android:text="YOUR BMR IS:"
+        android:text="BMR:"
+        android:visibility="invisible"
         android:textSize="15dp" />
 
     <LinearLayout

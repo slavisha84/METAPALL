@@ -17,22 +17,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".DashboardActivity"></activity>
-        <activity android:name=".BMRActivity" />
-        <activity
-            android:name=".Settings"
-            android:label="@string/title_activity_settings" />
-        <activity android:name=".ReciActivity" />
-        <activity android:name=".ProgActivity" />
-        <activity android:name=".SettingsActivity" />
-        <activity android:name=".CalendarActivity" />
-        <activity android:name=".ProteinActivity" />
-        <activity android:name=".H2OActivity" />
-        <activity android:name=".CHOActivity" />
-        <activity android:name=".BMIActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".BMRActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

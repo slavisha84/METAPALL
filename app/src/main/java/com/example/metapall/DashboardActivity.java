@@ -17,6 +17,8 @@ public class DashboardActivity extends AppCompatActivity {
         String Atext = intent.getStringExtra(BMRActivity.A_TEXT);
         String Gtext = intent.getStringExtra(BMRActivity.G_TEXT);
         String ACTtext = intent.getStringExtra(BMRActivity.ACT_TEXT);
+        String BRM_RES = intent.getStringExtra(BMRActivity.BMR_R);
+        String TDEE_RES = intent.getStringExtra(BMRActivity.TDEE_R);
 
 
         TextView HEIGHT = (TextView) findViewById(R.id.HEIGHT);
@@ -24,6 +26,9 @@ public class DashboardActivity extends AppCompatActivity {
         TextView AGE = (TextView) findViewById(R.id.AGE);
         TextView GENDER = (TextView) findViewById(R.id.GENDER);
         TextView ACTVLVL = (TextView) findViewById(R.id.ACTLVL);
+        TextView BMRResults = (TextView) findViewById(R.id.BMRResults);
+        TextView TDEEResults = (TextView) findViewById(R.id.TDEEResults);
+
 
 
         HEIGHT.setText("HEIGHT:           " + Htext + " ft");
@@ -31,6 +36,9 @@ public class DashboardActivity extends AppCompatActivity {
         AGE.setText("AGE:                 " + Atext);
         GENDER.setText("GENDER:          " + Gtext);
         ACTVLVL.setText("ACTIVITY LVL:  " + ACTtext);
+        BMRResults.setText(BRM_RES);
+        TDEEResults.setText(TDEE_RES);
+
 
     }
 }

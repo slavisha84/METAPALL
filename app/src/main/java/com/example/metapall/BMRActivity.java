@@ -23,12 +23,14 @@ public class BMRActivity extends AppCompatActivity implements AdapterView.OnItem
     public static final String A_TEXT = "com.metaboli.application.metaboli.A_TEXT";
     public static final String G_TEXT = "com.metaboli.application.metaboli.G_TEXT";
     public static final String ACT_TEXT = "com.metaboli.application.metaboli.ACT_TEXT";
+    public static final String BMR_R = "com.metaboli.application.metaboli.BMR_R";
+    public static final String TDEE_R = "com.metaboli.application.metaboli.TDEE_R";
 
     private EditText height;
     private EditText weight;
     private EditText age;
     private TextView BMRResults;
-    private TextView DTEEResults;
+    private TextView TDEEResults;
     private Spinner Gspinner;
     private Spinner Aspinner;
     private String genderCh;
@@ -46,7 +48,7 @@ public class BMRActivity extends AppCompatActivity implements AdapterView.OnItem
         weight = (EditText) findViewById(R.id.weight);
         age = (EditText) findViewById(R.id.age);
         BMRResults = (TextView) findViewById(R.id.BMRResults);
-        DTEEResults = (TextView) findViewById(R.id.DTEEResults);
+        TDEEResults = (TextView) findViewById(R.id.TDEEResults);
 
         //Identify spinners view based on r.id
         Gspinner = (Spinner) findViewById(R.id.spinnerGender);
@@ -94,12 +96,17 @@ public class BMRActivity extends AppCompatActivity implements AdapterView.OnItem
         String Gender = genderCh;
         String ActLvl = ActvCh;
 
+        String bmrres = BMRResults.getText().toString();
+        String tdeeres = TDEEResults.getText().toString();
+
         Intent intent = new Intent(this,DashboardActivity.class);
         intent.putExtra(H_TEXT,Height);
         intent.putExtra(W_TEXT,Weight);
         intent.putExtra(A_TEXT,Age);
         intent.putExtra(G_TEXT,Gender);
         intent.putExtra(ACT_TEXT,ActLvl);
+        intent.putExtra(BMR_R,bmrres);
+        intent.putExtra(TDEE_R,tdeeres);
         startActivity(intent);
 
     }
@@ -168,21 +175,21 @@ public class BMRActivity extends AppCompatActivity implements AdapterView.OnItem
             {
                 double bmr = Math.round((((weightValue / 2.2046) * 10) + (6.25 * (heightValue * 30.48)) - (5 * ageValue) + 5) * 100);
                 double bmrr = bmr / 100;
-                BMRResults.setText("YOUR BMR IS: " + bmrr);
+                BMRResults.setText("BMR: " + bmrr);
                 if (ACTIVITY .equals("Light"))
                 {
                     double dtee = Math.round((bmrr * 1.53) * 100);
-                    DTEEResults.setText("YOUR DTEE IS: " + dtee / 100);
+                    TDEEResults.setText("TDEE: " + dtee / 100);
                 }
                 else if (ACTIVITY .equals("Moderate"))
                 {
                     double dtee = Math.round((bmrr * 1.76) * 100);
-                    DTEEResults.setText("YOUR DTEE IS: " + dtee / 100);
+                    TDEEResults.setText("TDEE: " + dtee / 100);
                 }
                 else if (ACTIVITY .equals("Vigorous"))
                 {
                     double dtee = Math.round((bmrr * 2.25) * 100);
-                    DTEEResults.setText("YOUR DTEE IS: " + dtee / 100);
+                    TDEEResults.setText("TDEE: " + dtee / 100);
                 }
             }
             // IF statement to provide calculation based on Female gender and one out of 3 level of activity
@@ -190,21 +197,21 @@ public class BMRActivity extends AppCompatActivity implements AdapterView.OnItem
             {
                 double bmr = Math.round((((weightValue / 2.2046) * 10) + (6.25 * (heightValue * 30.48)) - (5 * ageValue) - 161) * 100);
                 double bmrr = bmr / 100;
-                BMRResults.setText("YOUR BMR IS: " + bmrr);
+                BMRResults.setText("BMR: " + bmrr);
                 if (ACTIVITY .equals("Light"))
                 {
                     double dtee = Math.round((bmrr * 1.53) * 100);
-                    DTEEResults.setText("YOUR DTEE IS: " + dtee / 100);
+                    TDEEResults.setText("TDEE: " + dtee / 100);
                 }
                 else if (ACTIVITY .equals("Moderate"))
                 {
                     double dtee = Math.round((bmrr * 1.76) * 100);
-                    DTEEResults.setText("YOUR DTEE IS: " + dtee / 100);
+                    TDEEResults.setText("TDEE: " + dtee / 100);
                 }
                 else if (ACTIVITY .equals("Vigorous"))
                 {
                     double dtee = Math.round((bmrr * 2.25) * 100);
-                    DTEEResults.setText("YOUR DTEE IS: " + dtee / 100);
+                    TDEEResults.setText("TDEE: " + dtee / 100);
                 }
             }
         }
