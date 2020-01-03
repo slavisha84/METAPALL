@@ -10,25 +10,80 @@
     tools:context=".BMRActivity">
 
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="105dp"
-        android:layout_height="90dp"
+    <TextView
+        android:id="@+id/kCal"
+        android:layout_width="50dp"
+        android:layout_height="19dp"
         android:layout_below="@+id/textView"
         android:layout_alignRight="@+id/textView"
-        android:layout_marginTop="231dp"
-        android:layout_marginRight="147dp"
-        app:srcCompat="@drawable/asset_9" />
+        android:layout_marginTop="252dp"
+        android:layout_marginRight="-34dp"
+        android:text="Kcal"
+        android:textSize="15dp" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="105dp"
-        android:layout_height="90dp"
+    <TextView
+        android:id="@+id/MaxCHO_RES"
+        android:layout_width="145dp"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/textView"
         android:layout_alignRight="@+id/textView"
-        android:layout_marginTop="379dp"
+        android:layout_marginTop="326dp"
+        android:layout_marginRight="145dp"
+        android:text="Max CHO"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/MinCHO_RES"
+        android:layout_width="143dp"
+        android:layout_height="24dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_marginTop="297dp"
         android:layout_marginRight="146dp"
-        app:srcCompat="@drawable/asset_9" />
+        android:text="Min CHO"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/PROTEIN1"
+        android:layout_width="149dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_marginTop="380dp"
+        android:layout_marginRight="140dp"
+        android:text="PRO1"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/PROTEIN2"
+        android:layout_width="152dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_marginTop="409dp"
+        android:layout_marginRight="136dp"
+        android:text="PRO2"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/PROTEIN3"
+        android:layout_width="148dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_marginTop="434dp"
+        android:layout_marginRight="138dp"
+        android:text="PRO3"
+        android:textSize="15dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="161dp"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="515dp"
+        android:background="@drawable/botwa">
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -99,8 +154,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView"
         android:layout_alignRight="@+id/textView"
-        android:layout_marginTop="289dp"
-        android:layout_marginRight="-105dp"
+        android:layout_marginTop="191dp"
+        android:layout_marginRight="122dp"
         android:text="TDEE:"
         android:textSize="15dp" />
 
@@ -110,53 +165,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView"
         android:layout_alignRight="@+id/textView"
-        android:layout_marginTop="240dp"
-        android:layout_marginRight="-105dp"
+        android:layout_marginTop="168dp"
+        android:layout_marginRight="122dp"
         android:text="BMR:"
-        android:textSize="15dp" />
-
-    <TextView
-        android:id="@+id/H2O"
-        android:layout_width="50dp"
-        android:layout_height="19dp"
-        android:layout_below="@+id/textView"
-        android:layout_alignRight="@+id/textView"
-        android:layout_marginTop="213dp"
-        android:layout_marginRight="183dp"
-        android:text="WATER"
-        android:textSize="15dp" />
-
-    <TextView
-        android:id="@+id/kCal"
-        android:layout_width="50dp"
-        android:layout_height="19dp"
-        android:layout_below="@+id/textView"
-        android:layout_alignRight="@+id/textView"
-        android:layout_marginTop="216dp"
-        android:layout_marginRight="-37dp"
-        android:text="Kcal"
-        android:textSize="15dp" />
-
-    <TextView
-        android:id="@+id/CHO"
-        android:layout_width="37dp"
-        android:layout_height="19dp"
-        android:layout_below="@+id/textView"
-        android:layout_alignRight="@+id/textView"
-        android:layout_marginTop="357dp"
-        android:layout_marginRight="183dp"
-        android:text="CHO"
-        android:textSize="15dp" />
-
-    <TextView
-        android:id="@+id/PROTEIN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
-        android:layout_alignRight="@+id/textView"
-        android:layout_marginTop="356dp"
-        android:layout_marginRight="-26dp"
-        android:text="PRO"
         android:textSize="15dp" />
 
     <TextView
@@ -168,16 +179,8 @@
         android:layout_marginTop="145dp"
         android:layout_marginRight="124dp"
         android:text="ACTIVITY LEVEL:"
+
         android:textSize="15dp" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="161dp"
-        android:layout_below="@+id/textView"
-        android:layout_marginTop="479dp"
-        android:background="@drawable/botwa">
-
-    </LinearLayout>
 
 
 </RelativeLayout>

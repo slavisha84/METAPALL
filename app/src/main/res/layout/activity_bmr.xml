@@ -12,8 +12,35 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="232dp"
+        android:layout_height="170dp"
         android:background="@drawable/gradbck"></LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="155dp"
+        android:layout_height="74dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_marginTop="243dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginRight="33dp">
+
+        <RadioButton
+            android:id="@+id/training"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Training" />
+
+        <RadioButton
+            android:id="@+id/competition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Competition" />
+
+
+    </RadioGroup>
 
     <TextView
         android:id="@+id/textView"
@@ -24,53 +51,53 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp" />
+        android:layout_marginTop="70dp" />
 
 
-    <EditText
-        android:id="@+id/height"
-        android:layout_width="158dp"
+    <Spinner
+        android:id="@+id/spinnerGender"
+        android:layout_width="161dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView"
         android:layout_alignEnd="@+id/textView"
-        android:layout_marginTop="110dp"
-        android:layout_marginEnd="30dp"
+        android:layout_alignRight="@+id/textView"
+        android:layout_marginTop="180dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginRight="29dp"
+        android:ems="10"
+        android:entries="@array/GenderChoice"
+        android:gravity="center_horizontal" />
+
+    <EditText
+        android:id="@+id/height"
+        android:layout_width="155dp"
+        android:layout_height="33dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="34dp"
         android:ems="10"
         android:gravity="center_horizontal"
         android:hint="Enter Height"
         android:importantForAutofill="no"
-        android:inputType="numberDecimal" />
-
-    <EditText
-        android:id="@+id/weight"
-        android:layout_width="158dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
-        android:layout_alignEnd="@+id/textView"
-        android:layout_alignRight="@+id/textView"
-        android:layout_marginTop="165dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:ems="10"
-        android:gravity="center_horizontal"
-        android:hint="Enter Weight"
-        android:inputType="number" />
+        android:inputType="numberDecimal"
+        android:textSize="12dp" />
 
     <EditText
         android:id="@+id/age"
-        android:layout_width="158dp"
-        android:layout_height="wrap_content"
+        android:layout_width="155dp"
+        android:layout_height="34dp"
         android:layout_below="@+id/textView"
         android:layout_alignEnd="@+id/textView"
         android:layout_alignRight="@+id/textView"
-        android:layout_marginTop="216dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
+        android:layout_marginTop="145dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginRight="34dp"
         android:ems="10"
         android:gravity="center_horizontal"
         android:hint="Enter Age"
-        android:inputType="number" />
-
+        android:inputType="number"
+        android:textSize="12dp" />
 
     <Spinner
         android:id="@+id/spinnerActivity"
@@ -79,26 +106,77 @@
         android:layout_below="@+id/textView"
         android:layout_alignEnd="@+id/textView"
         android:layout_alignRight="@+id/textView"
-        android:layout_marginTop="318dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginRight="28dp"
+        android:layout_marginTop="210dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
         android:ems="10"
         android:entries="@array/Activities"
         android:gravity="center_horizontal" />
 
-    <Spinner
-        android:id="@+id/spinnerGender"
-        android:layout_width="162dp"
-        android:layout_height="wrap_content"
+    <EditText
+        android:id="@+id/weight"
+        android:layout_width="155dp"
+        android:layout_height="34dp"
         android:layout_below="@+id/textView"
         android:layout_alignEnd="@+id/textView"
         android:layout_alignRight="@+id/textView"
-        android:layout_marginTop="274dp"
-        android:layout_marginEnd="29dp"
-        android:layout_marginRight="29dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginRight="34dp"
         android:ems="10"
-        android:entries="@array/GenderChoice"
-        android:gravity="center_horizontal" />
+        android:gravity="center_horizontal"
+        android:hint="Enter Weight"
+        android:inputType="number"
+        android:textSize="12dp" />
+
+
+    <EditText
+        android:id="@+id/duration"
+        android:layout_width="155dp"
+        android:layout_height="33dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_marginTop="324dp"
+        android:layout_marginEnd="33dp"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="Enter Training Hours"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/PROResults1"
+        android:layout_width="164dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_marginTop="457dp"
+        android:layout_marginRight="144dp"
+        android:text="PRO1:"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/PROResults2"
+        android:layout_width="96dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_marginTop="457dp"
+        android:layout_marginRight="105dp"
+        android:text="PRO2:"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/PROResults3"
+        android:layout_width="164dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_marginTop="457dp"
+        android:layout_marginRight="-65dp"
+        android:text="PRO3:"
+        android:textSize="15dp" />
 
     <Button
         android:id="@+id/calc"
@@ -107,28 +185,13 @@
         android:layout_below="@+id/textView"
         android:layout_alignEnd="@+id/textView"
         android:layout_alignRight="@+id/textView"
-        android:layout_marginTop="346dp"
-        android:layout_marginEnd="54dp"
-        android:layout_marginRight="54dp"
+        android:layout_marginTop="369dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginRight="56dp"
         android:background="@drawable/buttonradius"
         android:backgroundTint="#FFFFFF"
         android:onClick="CalculateBMR"
         android:text="@string/CalculateBMI" />
-
-    <Button
-        android:id="@+id/btnAddData"
-        android:layout_width="115dp"
-        android:layout_height="29dp"
-        android:layout_below="@+id/textView"
-        android:layout_alignEnd="@+id/textView"
-        android:layout_alignRight="@+id/textView"
-        android:layout_marginTop="449dp"
-        android:layout_marginEnd="52dp"
-        android:layout_marginRight="52dp"
-        android:background="@drawable/buttonradius"
-        android:backgroundTint="#FFFFFF"
-        android:visibility="invisible"
-        android:text="Save Data" />
 
     <TextView
         android:id="@+id/TDEEResults"
@@ -136,11 +199,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView"
         android:layout_alignRight="@+id/textView"
-        android:layout_marginTop="421dp"
-        android:layout_marginRight="27dp"
+        android:layout_marginTop="413dp"
+        android:layout_marginRight="26dp"
         android:text="TDEE:"
-        android:visibility="invisible"
-        android:textSize="15dp" />
+        android:textSize="15dp"
+        android:visibility="invisible" />
 
     <TextView
         android:id="@+id/BMRResults"
@@ -148,26 +211,45 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView"
         android:layout_alignRight="@+id/textView"
-        android:layout_marginTop="379dp"
-        android:layout_marginRight="28dp"
+        android:layout_marginTop="387dp"
+        android:layout_marginRight="31dp"
         android:text="BMR:"
-        android:visibility="invisible"
+        android:textSize="15dp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/MinCHOResults"
+        android:layout_width="164dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_marginTop="411dp"
+        android:layout_marginRight="77dp"
+        android:text="Min CHO:"
         android:textSize="15dp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_below="@+id/textView"
-        android:layout_marginTop="609dp"
-        android:background="@drawable/botwa">
-
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/gotodash"
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/MaxCHOResults"
+        android:layout_width="164dp"
         android:layout_height="wrap_content"
-        android:text="CONFIRM" />
+        android:layout_below="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_marginTop="412dp"
+        android:layout_marginRight="-80dp"
+        android:text="Max CHO:"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/H2OResults"
+        android:layout_width="164dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_marginTop="433dp"
+        android:layout_marginRight="31dp"
+        android:text="H2O:"
+        android:textSize="15dp" />
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -176,7 +258,26 @@
         android:layout_marginTop="479dp"
         android:background="@drawable/botwa">
 
+        <Button
+            android:id="@+id/btnAddData"
+            android:layout_width="115dp"
+            android:layout_height="29dp"
+            android:layout_marginTop="449dp"
+            android:layout_marginEnd="52dp"
+            android:layout_marginRight="52dp"
+            android:background="@drawable/buttonradius"
+            android:backgroundTint="#FFFFFF"
+            android:text="Save Data"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/gotodash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CONFIRM" />
+
     </LinearLayout>
 
 
 </RelativeLayout>
+
