@@ -287,6 +287,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="CONFIRM" />
+        <Button
+            android:id="@+id/gotowater"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="h2o" />
 
     </LinearLayout>
 

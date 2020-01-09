@@ -58,7 +58,6 @@ public class BMRActivity extends AppCompatActivity implements AdapterView.OnItem
     RadioGroup radioGroup;
     RadioButton radioButton;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -121,6 +120,19 @@ public class BMRActivity extends AppCompatActivity implements AdapterView.OnItem
             }
         });
 
+        Button buttonh2o = (Button) findViewById(R.id.gotowater);
+        buttonh2o.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openActivity3();
+            }
+        });
+    }
+
+    public void openActivity3(){
+
+        Intent intent = new Intent(this,WaterCalculator.class);
+        startActivity(intent);
     }
     public void  openActivity2(){
         EditText Hght = (EditText) findViewById(R.id.height);
@@ -143,8 +155,6 @@ public class BMRActivity extends AppCompatActivity implements AdapterView.OnItem
         String protres2 = PROResults2.getText().toString();
         String protres3 = PROResults3.getText().toString();
 
-
-
         Intent intent = new Intent(this,DashboardActivity.class);
         intent.putExtra(H_TEXT,Height);
         intent.putExtra(W_TEXT,Weight);
@@ -159,7 +169,6 @@ public class BMRActivity extends AppCompatActivity implements AdapterView.OnItem
         intent.putExtra(PROT_2,protres2);
         intent.putExtra(PROT_3,protres3);
         startActivity(intent);
-
     }
 
     public void AddData(){
@@ -218,8 +227,6 @@ public class BMRActivity extends AppCompatActivity implements AdapterView.OnItem
         Toast.makeText(this, "Selected Radio Button: " + ACTYPE,Toast.LENGTH_SHORT).show();
         String DURATION = duration.getText().toString();
 
-
-
         // if statement to execute if all required values are present
         if (ACTYPE.equals("Training") && HEIGHT != null && !"".equals(HEIGHT)&& WEIGHT != null && !"".equals(WEIGHT) && AGE != null && !"".equals(AGE) && GENDER != "Gender" && !"".equals(GENDER) && ACTIVITY != "Activity Level" && !"".equals(ACTIVITY)){
             double heightValue = Double.parseDouble(HEIGHT);
@@ -255,7 +262,6 @@ public class BMRActivity extends AppCompatActivity implements AdapterView.OnItem
                     MaxChOResults.setText("Max CHO:" + maxchor);
                 }
 
-
                 double pro1 = Math.round(((weightValue / 2.2046) * 1.2) * 100);
                 double pror1 = pro1 / 100;
 
@@ -267,8 +273,6 @@ public class BMRActivity extends AppCompatActivity implements AdapterView.OnItem
                 PROResults1.setText(("PRO: " + pror1));
                 PROResults2.setText(("PRO: " + pror2));
                 PROResults3.setText(("PRO: " + pror3));
-
-
 
                 if (ACTIVITY .equals("Light"))
                 {
@@ -365,8 +369,6 @@ public class BMRActivity extends AppCompatActivity implements AdapterView.OnItem
                 double maxchor = maxcho / 100;
                 MaxChOResults.setText("Max CHO:" + maxchor);
 
-
-
                 double pro1 = Math.round(((weightValue / 2.2046) * 1.2) * 100);
                 double pror1 = pro1 / 100;
 
@@ -378,8 +380,6 @@ public class BMRActivity extends AppCompatActivity implements AdapterView.OnItem
                 PROResults1.setText(("PRO: " + pror1));
                 PROResults2.setText(("PRO: " + pror2));
                 PROResults3.setText(("PRO: " + pror3));
-
-
 
                 if (ACTIVITY .equals("Light"))
                 {
@@ -423,8 +423,8 @@ public class BMRActivity extends AppCompatActivity implements AdapterView.OnItem
                 PROResults1.setText(("PRO: " + pror1));
                 PROResults2.setText(("PRO: " + pror2));
                 PROResults3.setText(("PRO: " + pror3));
-
                 BMRResults.setText("BMR: " + bmrr);
+
                 if (ACTIVITY .equals("Light"))
                 {
                     double dtee = Math.round((bmrr * 1.53) * 100);
@@ -442,7 +442,6 @@ public class BMRActivity extends AppCompatActivity implements AdapterView.OnItem
                 }
             }
         }
-
         else
             {
             Toast.makeText(this, "Please fill out all fields", Toast.LENGTH_SHORT).show();

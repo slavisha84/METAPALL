@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_calendar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context=".WaterCalculator">
+
+
+    <Button
+        android:id="@+id/calculator"
+        android:layout_width="115dp"
+        android:layout_height="29dp"
+        android:layout_below="@+id/WatterCalc"
+        android:layout_alignEnd="@+id/WatterCalc"
+        android:layout_alignRight="@+id/WatterCalc"
+        android:layout_marginTop="237dp"
+        android:layout_marginEnd="59dp"
+        android:layout_marginRight="59dp"
+        android:background="@drawable/buttonradius"
+        android:backgroundTint="#FFFFFF"
+        android:onClick="Calculateh2o"
+        android:text="@string/CalculateBMI" />
+
+    <TextView
+        android:id="@+id/preworkouttext"
+        android:layout_width="164dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/WatterCalc"
+        android:layout_alignEnd="@+id/WatterCalc"
+        android:layout_alignRight="@+id/WatterCalc"
+        android:layout_marginTop="273dp"
+        android:layout_marginEnd="154dp"
+        android:layout_marginRight="154dp"
+        android:text="Pre workout fluids:"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/duringworkouttext"
+        android:layout_width="281dp"
+        android:layout_height="23dp"
+        android:layout_below="@+id/WatterCalc"
+        android:layout_alignEnd="@+id/WatterCalc"
+        android:layout_alignRight="@+id/WatterCalc"
+        android:layout_marginTop="366dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginRight="39dp"
+        android:text="During workout fluids:"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/postworkouttext"
+        android:layout_width="283dp"
+        android:layout_height="24dp"
+        android:layout_below="@+id/WatterCalc"
+        android:layout_alignEnd="@+id/WatterCalc"
+        android:layout_alignRight="@+id/WatterCalc"
+        android:layout_marginTop="425dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginRight="37dp"
+        android:text="Post workout fluids:"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/postworkoutres"
+        android:layout_width="283dp"
+        android:layout_height="25dp"
+        android:layout_below="@+id/WatterCalc"
+        android:layout_alignEnd="@+id/WatterCalc"
+        android:layout_alignRight="@+id/WatterCalc"
+        android:layout_marginTop="450dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginRight="37dp"
+        android:text="Post workout Res:"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/pre4h"
+        android:layout_width="283dp"
+        android:layout_height="21dp"
+        android:layout_below="@+id/WatterCalc"
+        android:layout_alignEnd="@+id/WatterCalc"
+        android:layout_alignRight="@+id/WatterCalc"
+        android:layout_marginTop="302dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        android:text="4h pre workout:"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/pre2h"
+        android:layout_width="281dp"
+        android:layout_height="21dp"
+        android:layout_below="@+id/WatterCalc"
+        android:layout_alignEnd="@+id/WatterCalc"
+        android:layout_alignRight="@+id/WatterCalc"
+        android:layout_marginTop="327dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginRight="39dp"
+        android:text="2h pre workout:"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/SweatRate"
+        android:layout_width="279dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/WatterCalc"
+        android:layout_alignEnd="@+id/WatterCalc"
+        android:layout_alignRight="@+id/WatterCalc"
+        android:layout_marginTop="391dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:text="Sweat Rate:"
+        android:textSize="15dp" />
+
+    <EditText
+        android:id="@+id/preweight"
+        android:layout_width="155dp"
+        android:layout_height="34dp"
+        android:layout_below="@+id/WatterCalc"
+        android:layout_alignEnd="@+id/WatterCalc"
+        android:layout_alignRight="@+id/WatterCalc"
+        android:layout_marginTop="90dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginRight="39dp"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="Enter Pre Workout Weight"
+        android:inputType="number"
+        android:textSize="12dp" />
+
+    <EditText
+        android:id="@+id/postweight"
+        android:layout_width="155dp"
+        android:layout_height="34dp"
+        android:layout_below="@+id/WatterCalc"
+        android:layout_alignEnd="@+id/WatterCalc"
+        android:layout_alignRight="@+id/WatterCalc"
+        android:layout_marginTop="159dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="Enter post workout weight"
+        android:inputType="number"
+        android:textSize="12dp" />
+
+    <EditText
+        android:id="@+id/workouttime"
+        android:layout_width="155dp"
+        android:layout_height="34dp"
+        android:layout_below="@+id/WatterCalc"
+        android:layout_alignEnd="@+id/WatterCalc"
+        android:layout_alignRight="@+id/WatterCalc"
+        android:layout_marginTop="189dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="Enter workout time"
+        android:inputType="number"
+        android:textSize="12dp" />
+
+    <EditText
+        android:id="@+id/fluids"
+        android:layout_width="155dp"
+        android:layout_height="34dp"
+        android:layout_below="@+id/WatterCalc"
+        android:layout_alignEnd="@+id/WatterCalc"
+        android:layout_alignRight="@+id/WatterCalc"
+        android:layout_marginTop="129dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="Enter Fluid Consumption"
+        android:inputType="number"
+        android:textSize="12dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:background="@drawable/gradbck"></LinearLayout>
+
+    <TextView
+        android:id="@+id/WatterCalc"
+        android:text="Watter Calculator"
+        android:textSize="30dp"
+        android:textColor="@android:color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="161dp"
+        android:layout_below="@+id/WatterCalc"
+        android:layout_marginTop="479dp"
+        android:background="@drawable/botwa">
+    </LinearLayout>
+
+</RelativeLayout>
