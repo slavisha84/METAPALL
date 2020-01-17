@@ -224,7 +224,7 @@ public class BMRActivity extends AppCompatActivity implements AdapterView.OnItem
         int radioId = radioGroup.getCheckedRadioButtonId();
         radioButton = findViewById(radioId);
         String ACTYPE = (String) radioButton.getText();
-        Toast.makeText(this, "Selected Radio Button: " + ACTYPE,Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "Selected Radio Button: " + ACTYPE,Toast.LENGTH_SHORT).show();
         String DURATION = duration.getText().toString();
 
         // if statement to execute if all required values are present

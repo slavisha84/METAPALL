@@ -37,5 +37,4 @@ public class Splashscreen extends AppCompatActivity {
         imageView.startAnimation(myanim);
         imageView2.startAnimation(myanim);
     }
-
     }
