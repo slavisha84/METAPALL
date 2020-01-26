@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:design="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/activity_calendar"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -12,24 +11,13 @@
 
 
     <TextView
-        android:id="@+id/kCal"
-        android:layout_width="50dp"
-        android:layout_height="19dp"
-        android:layout_below="@+id/textView"
-        android:layout_alignRight="@+id/textView"
-        android:layout_marginTop="252dp"
-        android:layout_marginRight="-34dp"
-        android:text="Kcal"
-        android:textSize="15dp" />
-
-    <TextView
         android:id="@+id/MaxCHO_RES"
         android:layout_width="145dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView"
         android:layout_alignRight="@+id/textView"
-        android:layout_marginTop="326dp"
-        android:layout_marginRight="145dp"
+        android:layout_marginTop="298dp"
+        android:layout_marginRight="142dp"
         android:text="Max CHO"
         android:textSize="15dp" />
 
@@ -39,20 +27,9 @@
         android:layout_height="24dp"
         android:layout_below="@+id/textView"
         android:layout_alignRight="@+id/textView"
-        android:layout_marginTop="297dp"
-        android:layout_marginRight="146dp"
+        android:layout_marginTop="269dp"
+        android:layout_marginRight="143dp"
         android:text="Min CHO"
-        android:textSize="15dp" />
-
-    <TextView
-        android:id="@+id/PROTEIN1"
-        android:layout_width="149dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
-        android:layout_alignRight="@+id/textView"
-        android:layout_marginTop="380dp"
-        android:layout_marginRight="140dp"
-        android:text="PRO1"
         android:textSize="15dp" />
 
     <TextView
@@ -61,8 +38,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView"
         android:layout_alignRight="@+id/textView"
-        android:layout_marginTop="409dp"
-        android:layout_marginRight="136dp"
+        android:layout_marginTop="365dp"
+        android:layout_marginRight="134dp"
         android:text="PRO2"
         android:textSize="15dp" />
 
@@ -72,9 +49,44 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView"
         android:layout_alignRight="@+id/textView"
-        android:layout_marginTop="434dp"
-        android:layout_marginRight="138dp"
+        android:layout_marginTop="390dp"
+        android:layout_marginRight="136dp"
         android:text="PRO3"
+        android:textSize="15dp" />
+
+
+    <TextView
+        android:id="@+id/DAHR"
+        android:layout_width="148dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_marginTop="214dp"
+        android:layout_marginRight="138dp"
+        android:text="AVG. HR:"
+        android:textSize="15dp" />
+
+
+    <TextView
+        android:id="@+id/DAHRRes"
+        android:layout_width="294dp"
+        android:layout_height="22dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_marginTop="417dp"
+        android:layout_marginRight="-6dp"
+        android:text="Min. Cal. BASED ON AVG. HR:"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/PROTEIN1"
+        android:layout_width="149dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_marginTop="336dp"
+        android:layout_marginRight="138dp"
+        android:text="PRO1"
         android:textSize="15dp" />
 
 

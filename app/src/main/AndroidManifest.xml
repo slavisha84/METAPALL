@@ -19,6 +19,8 @@
         <activity android:name=".WaterCalculator"></activity>
         <activity android:name=".BMRActivity" />
         <activity android:name=".DashboardActivity"></activity>
+        <activity android:name=".CalendarActivity"></activity>
+
         <activity
             android:name=".Splashscreen"
             android:theme="@style/splash">

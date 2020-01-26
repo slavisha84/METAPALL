@@ -1,11 +1,17 @@
 package com.example.metapall;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.TextView;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+
 public class DashboardActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,6 +21,8 @@ public class DashboardActivity extends AppCompatActivity {
         String Htext = intent.getStringExtra(BMRActivity.H_TEXT);
         String Wtext = intent.getStringExtra(BMRActivity.W_TEXT);
         String Atext = intent.getStringExtra(BMRActivity.A_TEXT);
+        String HRText = intent.getStringExtra(BMRActivity.AHR_TEXT);
+        String AHRResl = intent.getStringExtra(BMRActivity.AHRRESULTS);
         String Gtext = intent.getStringExtra(BMRActivity.G_TEXT);
         String ACTtext = intent.getStringExtra(BMRActivity.ACT_TEXT);
         String BRM_RES = intent.getStringExtra(BMRActivity.BMR_R);
@@ -25,6 +33,7 @@ public class DashboardActivity extends AppCompatActivity {
         String PRO1 = intent.getStringExtra(BMRActivity.PROT_1);
         String PRO2 = intent.getStringExtra(BMRActivity.PROT_2);
         String PRO3 = intent.getStringExtra(BMRActivity.PROT_3);
+        String AHRRES = intent.getStringExtra(BMRActivity.AHR_TEXT);
 
         TextView HEIGHT = (TextView) findViewById(R.id.HEIGHT);
         TextView WEIGHT = (TextView) findViewById(R.id.WEIGHT);
@@ -38,6 +47,8 @@ public class DashboardActivity extends AppCompatActivity {
         TextView Pro1 = (TextView) findViewById(R.id.PROTEIN1);
         TextView Pro2 = (TextView) findViewById(R.id.PROTEIN2);
         TextView Pro3 = (TextView) findViewById(R.id.PROTEIN3);
+        TextView DAHRRes = (TextView) findViewById(R.id.DAHRRes);
+        TextView DAHR = (TextView) findViewById(R.id.DAHR);
 
         HEIGHT.setText("HEIGHT:           " + Htext + " ft");
         WEIGHT.setText("WEIGHT:           " + Wtext + " lb");
@@ -51,7 +62,36 @@ public class DashboardActivity extends AppCompatActivity {
         Pro1.setText(PRO1);
         Pro2.setText(PRO2);
         Pro3.setText(PRO3);
+        DAHR.setText("AVG HR:              " + HRText);
+        DAHRRes.setText(AHRResl);
 
 
+        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.NaviBot);
+        navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.navhome:
+                        Intent a = new Intent(DashboardActivity.this,BMRActivity.class);
+                        startActivity(a);
+                        break;
+                    case R.id.navprofile:
+                        Intent b = new Intent(DashboardActivity.this,DashboardActivity.class);
+                        startActivity(b);
+                        break;
+                    case R.id.navcalendar:
+                        Intent c = new Intent(DashboardActivity.this,CalendarActivity.class);
+                        startActivity(c);
+                        break;
+                    case R.id.navwater:
+                        Intent d = new Intent(DashboardActivity.this,WaterCalculator.class);
+                        startActivity(d);
+                        break;
+                }
+                return false;
+            }
+        });
     }
+
+
 }

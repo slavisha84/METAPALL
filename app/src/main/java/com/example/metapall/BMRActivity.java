@@ -1,11 +1,16 @@
 package com.example.metapall;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+import android.view.MenuItem;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.database.DatabaseUtils;
 import android.os.Bundle;
 import android.telephony.SignalStrength;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -22,11 +27,15 @@ import android.widget.AdapterView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.android.material.bottomnavigation.BottomNavigationItemView;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 public class BMRActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener  {
     public static final String H_TEXT = "com.metaboli.application.metaboli.H_TEXT";
     public static final String W_TEXT = "com.metaboli.application.metaboli.W_TEXT";
     public static final String A_TEXT = "com.metaboli.application.metaboli.A_TEXT";
     public static final String G_TEXT = "com.metaboli.application.metaboli.G_TEXT";
+    public static final String AHR_TEXT = "com.metaboli.application.metaboli.AHR_TEXT";
     public static final String ACT_TEXT = "com.metaboli.application.metaboli.ACT_TEXT";
     public static final String BMR_R = "com.metaboli.application.metaboli.BMR_R";
     public static final String TDEE_R = "com.metaboli.application.metaboli.TDEE_R";
@@ -35,10 +44,12 @@ public class BMRActivity extends AppCompatActivity implements AdapterView.OnItem
     public static final String PROT_1 = "com.metaboli.application.metaboli.PROT_1";
     public static final String PROT_2 = "com.metaboli.application.metaboli.PROT_2";
     public static final String PROT_3 = "com.metaboli.application.metaboli.PROT_3";
+    public static final String AHRRESULTS = "com.metaboli.application.metaboli.AHRRESULTS";
 
     private EditText height;
     private EditText weight;
     private EditText age;
+    private EditText avghr;
     private EditText duration;
     private TextView BMRResults;
     private TextView TDEEResults;
@@ -47,6 +58,7 @@ public class BMRActivity extends AppCompatActivity implements AdapterView.OnItem
     private TextView PROResults1;
     private TextView PROResults2;
     private TextView PROResults3;
+    private TextView Avghrresults;
     private Spinner Gspinner;
     private Spinner Aspinner;
     private String genderCh;
@@ -58,13 +70,46 @@ public class BMRActivity extends AppCompatActivity implements AdapterView.OnItem
     RadioGroup radioGroup;
     RadioButton radioButton;
 
+    private ActionBar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bmr);
+
+        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.NaviBot);
+        navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.navhome:
+                        Intent a = new Intent(BMRActivity.this,BMRActivity.class);
+                        startActivity(a);
+                        break;
+                    case R.id.navprofile:
+                        Intent b = new Intent(BMRActivity.this,DashboardActivity.class);
+                        startActivity(b);
+                        break;
+                    case R.id.navcalendar:
+                        Intent c = new Intent(BMRActivity.this,CalendarActivity.class);
+                        startActivity(c);
+                        break;
+                    case R.id.navwater:
+                        Intent d = new Intent(BMRActivity.this,WaterCalculator.class);
+                        startActivity(d);
+                        break;
+                }
+                return false;
+            }
+        });
+
+
+
+
         height = (EditText) findViewById(R.id.height);
         weight = (EditText) findViewById(R.id.weight);
         age = (EditText) findViewById(R.id.age);
+        avghr = (EditText) findViewById(R.id.avghr);
         BMRResults = (TextView) findViewById(R.id.BMRResults);
         TDEEResults = (TextView) findViewById(R.id.TDEEResults);
         MinCHOResults = (TextView) findViewById((R.id.MinCHOResults));
@@ -72,6 +117,7 @@ public class BMRActivity extends AppCompatActivity implements AdapterView.OnItem
         PROResults1 = (TextView) findViewById(R.id.PROResults1);
         PROResults2 = (TextView) findViewById(R.id.PROResults2);
         PROResults3 = (TextView) findViewById(R.id.PROResults3);
+        Avghrresults = (TextView)findViewById(R.id.Avghrresults);
         duration = (EditText)  findViewById(R.id.duration);
 
 
@@ -127,6 +173,22 @@ public class BMRActivity extends AppCompatActivity implements AdapterView.OnItem
                 openActivity3();
             }
         });
+
+        Button buttoncal = (Button) findViewById(R.id.gotocal);
+        buttoncal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openActivity4();
+            }
+        });
+
+    }
+
+
+    public void openActivity4(){
+
+        Intent intent = new Intent(this,CalendarActivity.class);
+        startActivity(intent);
     }
 
     public void openActivity3(){
@@ -144,6 +206,9 @@ public class BMRActivity extends AppCompatActivity implements AdapterView.OnItem
         EditText Ag = (EditText) findViewById(R.id.age);
         String Age = Ag.getText().toString();
 
+        EditText Avgh = (EditText) findViewById(R.id.avghr);
+        String Avghrval = Avgh.getText().toString();
+
         String Gender = genderCh;
         String ActLvl = ActvCh;
 
@@ -154,10 +219,12 @@ public class BMRActivity extends AppCompatActivity implements AdapterView.OnItem
         String protres1 = PROResults1.getText().toString();
         String protres2 = PROResults2.getText().toString();
         String protres3 = PROResults3.getText().toString();
+        String AvgHRRes = Avghrresults.getText().toString();
 
         Intent intent = new Intent(this,DashboardActivity.class);
         intent.putExtra(H_TEXT,Height);
         intent.putExtra(W_TEXT,Weight);
+        intent.putExtra(AHR_TEXT,Avghrval);
         intent.putExtra(A_TEXT,Age);
         intent.putExtra(G_TEXT,Gender);
         intent.putExtra(ACT_TEXT,ActLvl);
@@ -168,6 +235,8 @@ public class BMRActivity extends AppCompatActivity implements AdapterView.OnItem
         intent.putExtra(PROT_1,protres1);
         intent.putExtra(PROT_2,protres2);
         intent.putExtra(PROT_3,protres3);
+        intent.putExtra(AHRRESULTS,AvgHRRes);
+
         startActivity(intent);
     }
 
@@ -218,6 +287,7 @@ public class BMRActivity extends AppCompatActivity implements AdapterView.OnItem
     public void CalculateBMR(View v) {
         String HEIGHT = height.getText().toString();
         String WEIGHT = weight.getText().toString();
+        String AVGHR = avghr.getText().toString();
         String GENDER = genderCh;
         String AGE = age.getText().toString();
         String ACTIVITY = ActvCh;
@@ -231,8 +301,10 @@ public class BMRActivity extends AppCompatActivity implements AdapterView.OnItem
         if (ACTYPE.equals("Training") && HEIGHT != null && !"".equals(HEIGHT)&& WEIGHT != null && !"".equals(WEIGHT) && AGE != null && !"".equals(AGE) && GENDER != "Gender" && !"".equals(GENDER) && ACTIVITY != "Activity Level" && !"".equals(ACTIVITY)){
             double heightValue = Double.parseDouble(HEIGHT);
             double weightValue = Double.parseDouble(WEIGHT);
+            double avghrValue = Double.parseDouble(AVGHR);
             double ageValue = Double.parseDouble(AGE);
             double durValue = Double.parseDouble(DURATION);
+
 
             // IF statement to provide calculation based on Male gender and one out of 3 level of activity
             if (GENDER .equals("Male"))
@@ -240,6 +312,9 @@ public class BMRActivity extends AppCompatActivity implements AdapterView.OnItem
                 double bmr = Math.round((((weightValue / 2.2046) * 10) + (6.25 * (heightValue * 30.48)) - (5 * ageValue) + 5) * 100);
                 double bmrr = bmr / 100;
                 BMRResults.setText("BMR: " + bmrr);
+                double avghrres = Math.round((((avghrValue * 70 * 0.05 * 24 * 60) / 1000) * 5) * 100);
+                double avghrresr =avghrres / 100;
+                Avghrresults.setText("Min. Cal. BASED ON AVG. HR: " + avghrresr);
 
                 // Calculate CHO for male based on hour of training
                 if (durValue <= 3 ){

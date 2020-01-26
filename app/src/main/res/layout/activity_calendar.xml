@@ -2,17 +2,25 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_calendar"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="10"
-    tools:context=".CalendarActivity"
-    android:background="@drawable/asset_4hdpi">
-
+    xmlns:design="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/asset_4hdpi"
+    tools:context=".CalendarActivity">
+    <TextView
+        android:id="@+id/date_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="20dp"
+        android:text="Set the Date"
+        android:textColor="@android:color/background_dark"
+        android:textStyle="bold" />
 
     <CalendarView
-        android:id="@+id/calendarView2"
+        android:id="@+id/calendar"
         android:layout_width="match_parent"
         android:layout_height="284dp"
         android:dateTextAppearance="@style/CalendarWeekDatText"

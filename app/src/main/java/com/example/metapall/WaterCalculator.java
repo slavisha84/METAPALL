@@ -1,12 +1,17 @@
 package com.example.metapall;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class WaterCalculator extends AppCompatActivity {
 
@@ -34,6 +39,32 @@ public class WaterCalculator extends AppCompatActivity {
         pre2h = (TextView) findViewById(R.id.pre2h);
         SweatRate = (TextView) findViewById(R.id.SweatRate);
         postworkoutres = (TextView) findViewById(R.id.postworkoutres);
+
+        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.NaviBot);
+        navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.navhome:
+                        Intent a = new Intent(WaterCalculator.this,BMRActivity.class);
+                        startActivity(a);
+                        break;
+                    case R.id.navprofile:
+                        Intent b = new Intent(WaterCalculator.this,DashboardActivity.class);
+                        startActivity(b);
+                        break;
+                    case R.id.navcalendar:
+                        Intent c = new Intent(WaterCalculator.this,CalendarActivity.class);
+                        startActivity(c);
+                        break;
+                    case R.id.navwater:
+                        Intent d = new Intent(WaterCalculator.this,WaterCalculator.class);
+                        startActivity(d);
+                        break;
+                }
+                return false;
+            }
+        });
     }
 
 
