@@ -326,35 +326,5 @@
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
-    <Button
-        android:id="@+id/gotowater"
-        android:layout_width="77dp"
-        android:layout_height="37dp"
-        android:layout_below="@+id/textView"
-        android:layout_alignRight="@+id/textView"
-        android:layout_marginTop="455dp"
-        android:layout_marginRight="-38dp"
-        android:text="h2o" />
-
-    <Button
-        android:id="@+id/gotocal"
-        android:layout_width="77dp"
-        android:layout_height="37dp"
-        android:layout_below="@+id/textView"
-        android:layout_alignRight="@+id/textView"
-        android:layout_marginTop="462dp"
-        android:layout_marginRight="71dp"
-        android:text="Cal" />
-
-    <Button
-        android:id="@+id/gotodash"
-        android:layout_width="94dp"
-        android:layout_height="43dp"
-        android:layout_below="@+id/textView"
-        android:layout_alignRight="@+id/textView"
-        android:layout_marginTop="446dp"
-        android:layout_marginRight="180dp"
-        android:text="CONFIRM" />
-
 </RelativeLayout>
 

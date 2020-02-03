@@ -2,7 +2,6 @@ package com.example.metapall;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import android.view.MenuItem;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,7 +25,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Spinner;
 import android.widget.Toast;
-
 import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -104,8 +102,6 @@ public class BMRActivity extends AppCompatActivity implements AdapterView.OnItem
         });
 
 
-
-
         height = (EditText) findViewById(R.id.height);
         weight = (EditText) findViewById(R.id.weight);
         age = (EditText) findViewById(R.id.age);
@@ -119,7 +115,6 @@ public class BMRActivity extends AppCompatActivity implements AdapterView.OnItem
         PROResults3 = (TextView) findViewById(R.id.PROResults3);
         Avghrresults = (TextView)findViewById(R.id.Avghrresults);
         duration = (EditText)  findViewById(R.id.duration);
-
 
         // Use Radiobutton to establish the presence of duration field
         radioGroup = findViewById(R.id.radioGroup);
@@ -158,32 +153,7 @@ public class BMRActivity extends AppCompatActivity implements AdapterView.OnItem
 
         AddData();
 
-        Button button = (Button) findViewById(R.id.gotodash);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openActivity2();
-            }
-        });
-
-        Button buttonh2o = (Button) findViewById(R.id.gotowater);
-        buttonh2o.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openActivity3();
-            }
-        });
-
-        Button buttoncal = (Button) findViewById(R.id.gotocal);
-        buttoncal.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openActivity4();
-            }
-        });
-
     }
-
 
     public void openActivity4(){
 
@@ -364,6 +334,7 @@ public class BMRActivity extends AppCompatActivity implements AdapterView.OnItem
                     double dtee = Math.round((bmrr * 2.25) * 100);
                     TDEEResults.setText("TDEE: " + dtee / 100);
                 }
+                openActivity2();
             }
             // IF statement to provide calculation based on Female gender and one out of 3 level of activity
             else if (GENDER .equals("Female"))
@@ -420,6 +391,7 @@ public class BMRActivity extends AppCompatActivity implements AdapterView.OnItem
                     double dtee = Math.round((bmrr * 2.25) * 100);
                     TDEEResults.setText("TDEE: " + dtee / 100);
                 }
+                openActivity2();
             }
         }
 
@@ -471,6 +443,7 @@ public class BMRActivity extends AppCompatActivity implements AdapterView.OnItem
                     double dtee = Math.round((bmrr * 2.25) * 100);
                     TDEEResults.setText("TDEE: " + dtee / 100);
                 }
+                openActivity2();
             }
             // IF statement to provide calculation based on Female gender and one out of 3 level of activity
             else if (GENDER .equals("Female"))
@@ -515,12 +488,15 @@ public class BMRActivity extends AppCompatActivity implements AdapterView.OnItem
                     double dtee = Math.round((bmrr * 2.25) * 100);
                     TDEEResults.setText("TDEE: " + dtee / 100);
                 }
+                openActivity2();
             }
         }
         else
             {
             Toast.makeText(this, "Please fill out all fields", Toast.LENGTH_SHORT).show();
         }
+
+
     }
 }
 
