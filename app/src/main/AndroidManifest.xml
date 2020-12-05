@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.metapall">
 
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-feature android:name="android.hardware.type.watch" />
+
     <supports-screens
         android:anyDensity="true"
         android:largeScreens="true"
@@ -16,11 +20,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".WaterCalculator"></activity>
-        <activity android:name=".BMRActivity" />
-        <activity android:name=".DashboardActivity"></activity>
-        <activity android:name=".CalendarActivity"></activity>
 
+
+
+        <!--
+               Set to true if your app is Standalone, that is, it does not require the handheld
+               app to run.
+        -->
+        <meta-data
+            android:name="com.google.android.wearable.standalone"
+            android:value="true" />
+        <activity android:name=".Signin"></activity>
+        <activity android:name=".WaterCalculator" />
+        <activity android:name=".BMRActivity" />
+        <activity android:name=".DashboardActivity" />
+        <activity android:name=".CalendarActivity" />
         <activity
             android:name=".Splashscreen"
             android:theme="@style/splash">
